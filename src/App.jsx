@@ -33,7 +33,7 @@ export default function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('/tools.json')
+    fetch(`${import.meta.env.BASE_URL}tools.json`)
       .then((r) => r.json())
       .then((data) => {
         setTools(data.tools)
