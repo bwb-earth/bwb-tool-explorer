@@ -1,0 +1,102 @@
+{
+  "tools": [
+    {
+      "id": "slack",
+      "name": "Slack",
+      "description": "Team communications",
+      "current": [],
+      "suggested": [
+        {
+          "target": "Claude",
+          "detail": "AI assistant bot answering questions and summarising content in Slack channels"
+        }
+      ]
+    },
+    {
+      "id": "ms365",
+      "name": "MS365",
+      "description": "Office, Outlook, Teams, Planner, Power Automate",
+      "current": [
+        { "target": "Slack", "detail": "Timesheets reminder to Slack channels" },
+        {
+          "target": "Pipedrive",
+          "detail": "Create meetings in Pipedrive when mail is forwarded to a specific address"
+        }
+      ],
+      "suggested": []
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "description": "AI assistant",
+      "current": [
+        { "target": "SharePoint", "detail": "Reads and writes documents stored in SharePoint" },
+        { "target": "Office365", "detail": "Assist with Office workflows" }
+      ],
+      "suggested": [
+        { "target": "Slack", "detail": "AI bot in Slack channels for Q&A and content summarisation" },
+        { "target": "Pipedrive", "detail": "Draft proposals and summarise deal history from CRM data" }
+      ]
+    },
+    {
+      "id": "pipedrive",
+      "name": "Pipedrive",
+      "description": "CRM / sales pipeline",
+      "current": [
+        { "target": "Slack", "detail": "Posts deal notifications and stage-change alerts to Slack channels" },
+        { "target": "DocuSign", "detail": "Sends contracts for e-signature directly from deal records" },
+        { "target": "SharePoint", "detail": "Webhook to create new folders for new deals" }
+      ],
+      "suggested": []
+    },
+    {
+      "id": "safehr",
+      "name": "SafeHR",
+      "description": "HR management",
+      "current": [],
+      "suggested": [{ "target": "Outlook", "detail": "Sync leave calendars to Outlook" }]
+    },
+    {
+      "id": "melon",
+      "name": "Melon",
+      "description": "Travel management",
+      "current": [],
+      "suggested": [
+        { "target": "Outlook", "detail": "Push itineraries to Outlook Calendar automatically on booking" },
+        { "target": "Claude", "detail": "AI trip planning assistant to suggest options and summarise trips" }
+      ]
+    },
+    {
+      "id": "dext",
+      "name": "Dext",
+      "description": "Expense & receipt management",
+      "current": [],
+      "suggested": [
+        {
+          "target": "BwB Finance App",
+          "detail": "Feed categorised expense data into the internal Finance App"
+        },
+        { "target": "Claude", "detail": "AI-generated summaries of expense reports for faster review" }
+      ]
+    },
+    {
+      "id": "newsletter",
+      "name": "BwB Newsletter App",
+      "description": "Custom newsletter platform",
+      "current": [],
+      "suggested": [
+        {
+          "target": "BwB Website",
+          "detail": "Automatically sync new signups from the website into the newsletter subscriber list"
+        }
+      ]
+    },
+    {
+      "id": "website",
+      "name": "BwB Website",
+      "description": "Custom website platform",
+      "current": [{ "target": "BwB CMS", "detail": "Load information into the website" }],
+      "suggested": []
+    }
+  ]
+}
