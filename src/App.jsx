@@ -33,9 +33,9 @@ export default function App() {
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-4">
-              <img src={`${import.meta.env.BASE_URL}bwb-logo.png`} alt="BWB" className="h-25 w-auto" />
+              <img src={`${import.meta.env.BASE_URL}bwb-logo.png`} alt="BwB Logo" className="h-25 w-auto" />
               <div>
-                <h1 className="text-xl font-bold text-gray-900 leading-tight">BWB Tool Ecosystem Explorer</h1>
+                <h1 className="text-xl font-bold text-gray-900 leading-tight">BwB Tool Ecosystem Explorer</h1>
                 <p className="text-gray-500 text-sm mt-0.5">Select a tool to explore its current and suggested integrations</p>
               </div>
             </div>
