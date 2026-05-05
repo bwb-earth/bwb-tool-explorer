@@ -3,7 +3,8 @@
     "allow": [
       "Bash(npm create *)",
       "Bash(npm install *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(len\\(d['tools']\\), 'tools'\\); [print\\(t['id'], '->', [c['target'] for c in t['current']], '|', [s['target'] for s in t['suggested']]\\) for t in d['tools']]\")"
     ]
   }
 }
