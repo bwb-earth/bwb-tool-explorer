@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import ToolModal from './ToolModal'
 
 const LEFT_X = 220
 const RIGHT_X = 680
@@ -9,6 +10,7 @@ const PAD_V = 60
 export default function GraphView({ tools }) {
   const [hovered, setHovered] = useState(null)
   const [tooltip, setTooltip] = useState(null)
+  const [modalTool, setModalTool] = useState(null)
   const svgRef = useRef(null)
 
   const targetSet = new Set()
@@ -61,6 +63,7 @@ export default function GraphView({ tools }) {
 
   return (
     <div>
+      <ToolModal tool={modalTool} onClose={() => setModalTool(null)} />
       <div className="flex items-center gap-6 mb-5 text-sm">
         <span className="flex items-center gap-2 text-gray-500">
           <svg width="28" height="10"><line x1="0" y1="5" x2="28" y2="5" stroke="#22c55e" strokeWidth="2.5" /></svg>
@@ -70,7 +73,7 @@ export default function GraphView({ tools }) {
           <svg width="28" height="10"><line x1="0" y1="5" x2="28" y2="5" stroke="#a855f7" strokeWidth="2" strokeDasharray="5,3" /></svg>
           Suggested integration
         </span>
-        <span className="text-gray-400 text-xs italic">Hover a tool to highlight its connections</span>
+        <span className="text-gray-400 text-xs italic">Hover to highlight · Click tool to see details</span>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-x-auto">
@@ -110,7 +113,11 @@ export default function GraphView({ tools }) {
             const isActive = hovered === node.id
             const hasEdges = edges.some(e => e.toolId === node.id)
             return (
-              <g key={node.id} onMouseEnter={() => setHovered(node.id)} onMouseLeave={() => setHovered(null)} style={{ cursor: 'pointer' }}>
+              <g key={node.id}
+                onMouseEnter={() => setHovered(node.id)}
+                onMouseLeave={() => setHovered(null)}
+                onClick={() => setModalTool(node)}
+                style={{ cursor: 'pointer' }}>
                 <circle cx={node.x} cy={node.y} r={NODE_R}
                   fill={isActive ? '#4f46e5' : '#eef2ff'}
                   stroke={isActive ? '#3730a3' : hasEdges ? '#a5b4fc' : '#e5e7eb'}

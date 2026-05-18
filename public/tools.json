@@ -1,42 +1,11 @@
 {
   "tools": [
     {
-      "id": "slack",
-      "name": "Slack",
-      "description": "Team communications",
-      "current": [],
-      "suggested": [
-        {
-          "target": "Claude",
-          "detail": "AI assistant bot answering questions and summarising content in Slack channels"
-        }
-      ]
-    },
-    {
       "id": "powerautomate",
       "name": "Power Automate",
       "description": "Workflow automation platform",
-      "current": [
-        { "target": "Slack", "detail": "Timesheets reminder to Slack channels" }
-      ],
+      "current": [{ "target": "Slack", "detail": "Timesheets reminder to Slack channels" }],
       "suggested": []
-    },
-    {
-      "id": "planner",
-      "name": "Planner",
-      "description": "Task and project management",
-      "current": [],
-      "suggested": [
-        { "target": "Slack", "detail": "Posts task notifications and reminders to Slack channels" },
-        {
-          "target": "Pipedrive",
-          "detail": "Link pipedrive deals to planner projects."
-        },
-        {
-          "target": "Claude",
-          "detail": "AI assistant to summarise project status and suggest next steps based on task data"
-        }
-      ]
     },
     {
       "id": "claude",
@@ -70,16 +39,6 @@
       "suggested": [{ "target": "Outlook", "detail": "Sync leave calendars to Outlook" }]
     },
     {
-      "id": "melon",
-      "name": "Melon",
-      "description": "Travel management",
-      "current": [],
-      "suggested": [
-        { "target": "Outlook", "detail": "Push itineraries to Outlook Calendar automatically on booking" },
-        { "target": "Claude", "detail": "AI trip planning assistant to suggest options and summarise trips" }
-      ]
-    },
-    {
       "id": "dext",
       "name": "Dext",
       "description": "Expense & receipt management",
@@ -93,22 +52,41 @@
       ]
     },
     {
-      "id": "newsletter",
-      "name": "BwB Newsletter App",
-      "description": "Custom newsletter platform",
-      "current": [],
-      "suggested": [
-        {
-          "target": "BwB Website",
-          "detail": "Automatically sync new signups from the website into the newsletter subscriber list"
-        }
-      ]
-    },
-    {
       "id": "website",
       "name": "BwB Website",
       "description": "Custom website platform",
       "current": [{ "target": "BwB CMS", "detail": "Content Management System for bwb website" }],
+      "suggested": []
+    },
+    {
+      "id": "prudence",
+      "name": "BwB Prudence",
+      "description": "BwB's internal knowledge and AI assistant",
+      "current": [
+        { "target": "OpenAPI platform", "detail": "Feeds internal knowledge into the AI assistant" }
+      ],
+      "suggested": []
+    },
+    {
+      "id": "bid-writer",
+      "name": "BwB Bid Writer",
+      "description": "BwB's automated bid writing assistant",
+      "current": [
+        {
+          "target": "OpenAPI platform",
+          "detail": "Feeds bid templates and historical data into the assistant"
+        }
+      ],
+      "suggested": []
+    },
+    {
+      "id": "opportunity-finder",
+      "name": "BwB Opportunity Finder",
+      "description": "BwB's automated opportunity finder assistant",
+      "current": [
+        { "target": "OpenAPI platform", "detail": "Analyze scraped data for new business opportunities." },
+        { "target": "BrightData", "detail": "Scrape market data for opportunity identification" }
+      ],
       "suggested": []
     }
   ]
