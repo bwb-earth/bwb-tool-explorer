@@ -4,7 +4,12 @@
       "id": "powerautomate",
       "name": "Power Automate",
       "description": "Workflow automation platform",
-      "current": [{ "target": "Slack", "detail": "Timesheets reminder to Slack channels" }],
+      "current": [
+        {
+          "target": "Slack",
+          "detail": "Sends automated timesheet reminders to selected Slack channels."
+        }
+      ],
       "suggested": []
     },
     {
@@ -12,69 +17,106 @@
       "name": "Claude",
       "description": "AI assistant",
       "current": [
-        { "target": "SharePoint", "detail": "Reads and writes documents stored in SharePoint" },
-        { "target": "Office365", "detail": "Assist with Office workflows" }
+        {
+          "target": "SharePoint",
+          "detail": "Reads and updates documents stored in SharePoint."
+        },
+        {
+          "target": "Office365",
+          "detail": "Supports common Office document and productivity workflows."
+        }
       ],
       "suggested": [
-        { "target": "Slack", "detail": "AI bot in Slack channels for Q&A and content summarisation" },
-        { "target": "Pipedrive", "detail": "Draft proposals and summarise deal history from CRM data" }
+        {
+          "target": "Slack",
+          "detail": "Add Claude as an AI assistant inside Slack channels so teams can ask questions, summarise long discussions, extract action points, and quickly generate draft responses or content without leaving Slack."
+        },
+        {
+          "target": "Pipedrive",
+          "detail": "Connect Claude to Pipedrive so it can summarise deal history, highlight key client context, draft proposal text, prepare follow-up emails, and support sales teams with faster CRM-based content generation."
+        }
       ]
     },
     {
       "id": "pipedrive",
       "name": "Pipedrive",
-      "description": "CRM / sales pipeline",
+      "description": "CRM and sales pipeline platform",
       "current": [
-        { "target": "Slack", "detail": "Posts deal notifications and stage-change alerts to Slack channels" },
-        { "target": "DocuSign", "detail": "Sends contracts for e-signature directly from deal records" },
-        { "target": "SharePoint", "detail": "Webhook to create new folders for new deals" }
+        {
+          "target": "Slack",
+          "detail": "Posts deal updates and stage-change alerts to Slack."
+        },
+        {
+          "target": "DocuSign",
+          "detail": "Sends contracts for e-signature from deal records."
+        },
+        {
+          "target": "SharePoint",
+          "detail": "Creates SharePoint folders for new deals."
+        }
       ],
       "suggested": []
     },
     {
       "id": "safehr",
       "name": "SafeHR",
-      "description": "HR management",
+      "description": "HR management platform",
       "current": [],
-      "suggested": [{ "target": "Outlook", "detail": "Sync leave calendars to Outlook" }]
+      "suggested": [
+        {
+          "target": "Outlook",
+          "detail": "Sync approved leave, holidays, and absence records from SafeHR into Outlook calendars so managers and teams can easily see staff availability when planning meetings, project work, and resourcing."
+        }
+      ]
     },
     {
       "id": "dext",
       "name": "Dext",
-      "description": "Expense & receipt management",
+      "description": "Expense and receipt management platform",
       "current": [],
       "suggested": [
         {
           "target": "BwB Finance App",
-          "detail": "Feed categorised expense data into the internal Finance App"
+          "detail": "Send categorised expense and receipt data from Dext into the internal Finance App to reduce manual data entry, improve financial visibility, and support faster review of spending by project, client, or cost category."
         },
-        { "target": "Claude", "detail": "AI-generated summaries of expense reports for faster review" }
+        {
+          "target": "Claude",
+          "detail": "Use Claude to generate plain-language summaries of expense reports, highlight unusual spending patterns, identify missing information, and support finance teams during review and approval workflows."
+        }
       ]
     },
     {
       "id": "website",
       "name": "BwB Website",
       "description": "Custom website platform",
-      "current": [{ "target": "BwB CMS", "detail": "Content Management System for bwb website" }],
+      "current": [
+        {
+          "target": "BwB CMS",
+          "detail": "Uses the CMS to manage website content."
+        }
+      ],
       "suggested": []
     },
     {
       "id": "prudence",
       "name": "BwB Prudence",
-      "description": "BwB's internal knowledge and AI assistant",
+      "description": "Internal knowledge and AI assistant",
       "current": [
-        { "target": "OpenAPI platform", "detail": "Feeds internal knowledge into the AI assistant" }
+        {
+          "target": "OpenAPI platform",
+          "detail": "Feeds internal knowledge into the AI assistant."
+        }
       ],
       "suggested": []
     },
     {
       "id": "bid-writer",
       "name": "BwB Bid Writer",
-      "description": "BwB's automated bid writing assistant",
+      "description": "Automated bid writing assistant",
       "current": [
         {
           "target": "OpenAPI platform",
-          "detail": "Feeds bid templates and historical data into the assistant"
+          "detail": "Provides bid templates and historical bid data."
         }
       ],
       "suggested": []
@@ -82,10 +124,16 @@
     {
       "id": "opportunity-finder",
       "name": "BwB Opportunity Finder",
-      "description": "BwB's automated opportunity finder assistant",
+      "description": "Automated opportunity discovery assistant",
       "current": [
-        { "target": "OpenAPI platform", "detail": "Analyze scraped data for new business opportunities." },
-        { "target": "BrightData", "detail": "Scrape market data for opportunity identification" }
+        {
+          "target": "OpenAPI platform",
+          "detail": "Analyses scraped data for new opportunities."
+        },
+        {
+          "target": "BrightData",
+          "detail": "Scrapes market data for opportunity discovery."
+        }
       ],
       "suggested": []
     }
